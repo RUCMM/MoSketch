@@ -200,6 +200,7 @@ body {
     /*grid-auto-flow: dense;*/
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    position: relative;
     /*align-items: stretch;*/
 }
 
@@ -247,6 +248,16 @@ body {
     width: 30%;
     height: 30%;
     border: 1px solid black;
+}
+
+.over2 {
+    z-index: 2;
+    width: 30%;
+    height: 30%;
+    border: 1px solid black;
+    position: absolute;  /* 启用绝对定位 */
+    top: 0;              /* 贴顶部 */
+    right: 0;            /* 贴右侧 */
 }
 
 .grid_r_1 {
