@@ -40,11 +40,11 @@
 <!--Title block-->
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop" id="top">
+    <div class="container is-widescreen" id="top">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Multi-Object Sketch Animation by<br>Scene Decomposition and Motion Planning</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title">Multi-Object Sketch Animation by Scene Decomposition and Motion Planning</h1>
+          <div class="is-size-4 publication-authors">
             <span class="author-block"><a href="https://scholar.google.com/citations?user=u7Dqok8AAAAJ" target="_blank">Jingyu Liu</a>,</span>
             <span class="author-block"><a href="https://xxayt.github.io/" target="_blank">Zijie Xin</a>,</span>
             <span class="author-block"><a href="https://rucmm.github.io/MoSketch/" target="_blank">Yuhan Fu</a>,</span>
@@ -53,11 +53,11 @@
             <span class="author-block"><a href="http://lixirong.net/" target="_blank">Xirong Li</a><sup>†</sup></span>
           </div>
           <br>
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-4 publication-authors">
             <span class="author-block">Renmin University of China</span>
           </div>
 
-          <div class="is-size-3 publication-authors">
+          <div class="is-size-2 publication-authors">
             <span class="author-block">ICCV 2025</span>
           </div>
 
@@ -104,6 +104,13 @@
             <div class="publication-links ">
 
             <span class="link-block">
+              <a href="#abstract"
+                  class="nav-link button-55 is-normal">
+                <span>Abstract</span>
+                </a>
+            </span>
+
+            <span class="link-block">
               <a href="#gallery"
                   class="nav-link button-55 is-normal">
                 <span>Gallery</span>
@@ -145,43 +152,6 @@
                 </a>
             </span>
 
-
-
-            <span class="link-block">
-              <a href="#abstraction"
-                  class="nav-link button-55 is-normal">
-                <span>Abstraction Levels</span>
-                </a>
-            </span>
-
-            <span class="link-block">
-              <a href="#sketch_representation"
-                  class="nav-link button-55 is-normal">
-                <span>Sketch Representation</span>
-                </a>
-            </span>
-
-            <span class="link-block">
-              <a href="#trade-off"
-                 class="nav-link button-55 is-normal">
-                <span>Trade-off</span>
-                </a>
-            </span>
-
-            <span class="link-block">
-              <a href="#hyperparameters"
-                 class="nav-link button-55 is-normal">
-                <span>Hyperparameter Effects</span>
-                </a>
-            </span>
-
-            <span class="link-block">
-              <a href="#vidmodel"
-                 class="nav-link button-55 is-normal">
-                <span>Video Model Priors</span>
-                </a>
-            </span>
-
             <span class="link-block">
               <a href="#ablation"
                  class="nav-link button-55 is-normal">
@@ -208,10 +178,21 @@
 </section>
 
 <!--Video-->
+<section class="section">
+  <div class="container is-widescreen">
+    <img src="static/images/method/intro.png" alt="intro"/>
+  </div>
+</section>
 
 <!-- Abstract. -->
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-widescreen" id="abstract">
+    <div class="link-block ">
+      <a href="#top"
+          class="nav-link button-55 is-normal">
+        <span>Go to Top</span>
+        </a>
+    </div>
     <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <h2 class="title is-3">Abstract</h2>
@@ -806,7 +787,7 @@
   </div>
   <div class="columns is-centered has-text-centered">
     <div class="column has-text-centered">
-      <img src="static/images/method/main.png"/>
+      <img src="static/images/method/main.png" alt="method"/>
       <div class="content has-text-justified">
         We propose MoSketch based on iterative optimization through Score Distillation Sampling (SDS) and thus animating a multi-object sketch in a training-data free manner.
         To tackle the two challenges (object-aware motion modeing and complex motion optimization) in a divide-and-conquer strategy, we propose four modules: LLM-based scene decomposition, LLM-based motion planning, multi-grained motion refinement and compositional SDS.
@@ -2667,7 +2648,7 @@
 
           <br>
 
-          <div class="prompt_gallery">
+          <div class="prompt_gallery2">
             <div class="captioned_video">
               <img class="varying_img" src="static/images/varying/helicopter.png" alt="helicopter"/>
               <h6 class="caption">Input</h6>
@@ -2684,7 +2665,7 @@
 
           <br>
 
-          <div class="prompt_gallery">
+          <div class="prompt_gallery2">
             <div class="captioned_video">
               <img class="varying_img" src="static/images/varying/satellite.png" alt="satellite"/>
               <h6 class="caption">Input</h6>
@@ -2701,7 +2682,7 @@
 
           <br>
 
-          <div class="prompt_gallery">
+          <div class="prompt_gallery2">
             <div class="captioned_video">
               <img class="varying_img" src="static/images/varying/cat.png" alt="cat"/>
               <h6 class="caption">Input</h6>
@@ -2866,144 +2847,393 @@
 
 <!-- Results on Single-Object Sketches -->
 <section class="section hero is-light">
-<div class="container is-widescreen" id="single">
-  <div class="link-block ">
+  <div class="container is-widescreen" id="single">
+    <div class="link-block">
+        <a href="#top"
+            class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+    </div>
+    <div class="section-title has-text-centered is-centered">
+      <h2 class="title is-3">Results on Single-Object Sketches</h2><br>
+    </div>
+
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <div class="gallery">
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/ballerina.png" alt="ballerina"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/ballerina.gif" alt="ballerina"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The ballerina is dancing." title="">The ballerina is dancing.</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/biking.png" alt="biking"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/biking.gif" alt="biking"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The biker is pedaling, each leg pumping up and down as the wheels of the bicycle spin rapidly, propelling them forward." title="">The biker is pedaling, each leg pumping [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/butterfly.png" alt="butterfly"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/butterfly.gif" alt="butterfly"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A butterfly fluttering its wings and flying gracefully." title="">A butterfly fluttering its wings and flying [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/cat.png" alt="cat"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/cat.gif" alt="cat"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The cat is playing." title="">The cat is playing.</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/flag.png" alt="flag"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/flag.gif" alt="flag"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A waving flag fluttering and rippling in the wind." title="">A waving flag fluttering and rippling [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/gazelle.png" alt="gazelle"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/gazelle.gif" alt="gazelle"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A gazelle galloping and jumping to escape predators." title="">A gazelle galloping and jumping to escape [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/horse.png" alt="horse"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/horse.gif" alt="horse"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A galloping horse." title="">A galloping horse.</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/kangaroo.png" alt="kangaroo"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/kangaroo.gif" alt="kangaroo"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The kangaroo is jumping, crouching, gathering energy, then propelling itself forward with incredible force and agility, tucking its legs mid-air before landing gracefully on its hind legs with remarkable balance and coordination." title="">The kangaroo is jumping, crouching, [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/lizard.png" alt="lizard"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/lizard.gif" alt="lizard"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The lizard moves with a sinuous, undulating motion, gliding smoothly over surfaces using its agile limbs and tail for balance and propulsion." title="">The lizard moves with a sinuous, undulating [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/penguin.png" alt="penguin"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/penguin.gif" alt="penguin"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The penguin is shuffling along the ice terrain, taking deliberate and cautious step with its flippers outstretched to maintain balance." title="">The penguin is shuffling along [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/runner.png" alt="runner"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/runner.gif" alt="runner"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The runner runs with rhythmic leg strides and synchronized arm swing propelling them forward while maintaining balance." title="">The runner runs with rhythmic leg strides [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/sapceship.png" alt="sapceship"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/sapceship.gif" alt="sapceship"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The spaceship accelerates rapidly during takeoff, utilizing powerful rocket engines." title="">The spaceship accelerates [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/saxplay.png" alt="saxplay"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/saxplay.gif" alt="saxplay"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The jazz saxophonist performs on stage with a rhythmic sway, his upper body sways subtly to the rhythm of the music." title="">The jazz saxophonist performs on stage [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/squirrel.png" alt="squirrel"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/squirrel.gif" alt="squirrel"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The squirrel uses its dexterous front paws to hold and manipulate nuts, displaying meticulous and deliberate motions while eating." title="">The squirrel uses its dexterous front [..]</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/surfer.png" alt="surfer"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/surfer.gif" alt="surfer"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A surfer riding and maneuvering on waves on a surfboard." title="">A surfer riding and maneuvering on [..]</h6>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Ablation -->
+<section class="section">
+  <div class="container is-widescreen" id="ablation">
+    <div class="link-block ">
       <a href="#top"
           class="nav-link button-55 is-normal">
         <span>Go to Top</span>
         </a>
-  </div>
-  <div class="section-title has-text-centered is-centered">
-    <h2 class="title is-3">Results on Single-Object Sketches</h2><br>
-  </div>
+    </div>
+    <div class="section-title has-text-centered is-centered">
+      <h2 class="title is-3">Ablation</h2><br>
+    </div>
 
-  <div class="container is-max-desktop is-centered has-text-centered">
-    <div class="gallery">
+    <div class="columns is-centered has-text-centered is-variable is-8">
+      <div class="column is-three-quarters is-centered">
+        <div class="ablation_gallery">
 
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/ballerina.png" alt="ballerina"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/ballerina.gif" alt="ballerina"/>
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/images/ablation/cannon1.png" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/notraj.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/nogl.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/nolc.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/noob.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/nocsds.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/cannon1/ours.gif" alt="cannon1"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/images/ablation/eat2.png" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/notraj.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/nogl.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/nolc.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/noob.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/nocsds.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/eat2/ours.gif" alt="eat2"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/images/ablation/basketball5.png" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/notraj.gif" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/nogl.gif" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/nolc.gif" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/noob.gif" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/nocsds.gif" alt="basketball5"/>
+          </div>
+
+          <div class="captioned_video">
+            <img class="gallery_img" src="static/videos/ablation/basketball5/ours.gif" alt="basketball5"/>
+          </div>
+
+
+          <div class="captioned_video">
+            <h6 class="caption">Input</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption">No Motion Plan</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption">No Object Refinement</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption">No Point Refinement</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption">No Object-aware Network</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption">No CSDS</h6>
+          </div>
+          <div class="captioned_video">
+            <h6 class="caption"><b>Ours</b></h6>
+          </div>
         </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The ballerina is dancing." title="">The ballerina is dancing.</h6>
       </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/biking.png" alt="biking"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/biking.gif" alt="biking"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The biker is pedaling, each leg pumping up and down as the wheels of the bicycle spin rapidly, propelling them forward." title="">The biker is pedaling, each leg pumping [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/butterfly.png" alt="butterfly"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/butterfly.gif" alt="butterfly"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A butterfly fluttering its wings and flying gracefully." title="">A butterfly fluttering its wings and flying [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/cat.png" alt="cat"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/cat.gif" alt="cat"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The cat is playing." title="">The cat is playing.</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/flag.png" alt="flag"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/flag.gif" alt="flag"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A waving flag fluttering and rippling in the wind." title="">A waving flag fluttering and rippling [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/gazelle.png" alt="gazelle"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/gazelle.gif" alt="gazelle"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A gazelle galloping and jumping to escape predators." title="">A gazelle galloping and jumping to escape [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/horse.png" alt="horse"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/horse.gif" alt="horse"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A galloping horse." title="">A galloping horse.</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/kangaroo.png" alt="kangaroo"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/kangaroo.gif" alt="kangaroo"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The kangaroo is jumping, crouching, gathering energy, then propelling itself forward with incredible force and agility, tucking its legs mid-air before landing gracefully on its hind legs with remarkable balance and coordination." title="">The kangaroo is jumping, crouching, [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/lizard.png" alt="lizard"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/lizard.gif" alt="lizard"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The lizard moves with a sinuous, undulating motion, gliding smoothly over surfaces using its agile limbs and tail for balance and propulsion." title="">The lizard moves with a sinuous, undulating [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/penguin.png" alt="penguin"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/penguin.gif" alt="penguin"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The penguin is shuffling along the ice terrain, taking deliberate and cautious step with its flippers outstretched to maintain balance." title="">The penguin is shuffling along [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/runner.png" alt="runner"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/runner.gif" alt="runner"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The runner runs with rhythmic leg strides and synchronized arm swing propelling them forward while maintaining balance." title="">The runner runs with rhythmic leg strides [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/sapceship.png" alt="sapceship"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/sapceship.gif" alt="sapceship"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The spaceship accelerates rapidly during takeoff, utilizing powerful rocket engines." title="">The spaceship accelerates [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/saxplay.png" alt="saxplay"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/saxplay.gif" alt="saxplay"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The jazz saxophonist performs on stage with a rhythmic sway, his upper body sways subtly to the rhythm of the music." title="">The jazz saxophonist performs on stage [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/squirrel.png" alt="squirrel"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/squirrel.gif" alt="squirrel"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The squirrel uses its dexterous front paws to hold and manipulate nuts, displaying meticulous and deliberate motions while eating." title="">The squirrel uses its dexterous front [..]</h6>
-      </div>
-
-      <div class="captioned_video">
-        <div class="inner_gallery">
-          <img class="gallery_img over grid_r_1 grid_c_1" src="static/images/single/surfer.png" alt="surfer"/>
-          <img class="gallery_img under grid_r_1 grid_c_1" src="static/videos/single/surfer.gif" alt="surfer"/>
-        </div>
-        <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A surfer riding and maneuvering on waves on a surfboard." title="">A surfer riding and maneuvering on [..]</h6>
-      </div>
-
     </div>
   </div>
-</div>
 </section>
+
+
+<!-- Limitations -->
+<section class="section hero is-light" id="limitations">
+  <div class="container is-widescreen">
+    <div class="link-block ">
+      <a href="#top"
+          class="nav-link button-55 is-normal">
+        <span>Go to Top</span>
+        </a>
+    </div>
+
+    <div class="section-title has-text-centered is-centered">
+      <h2 class="title is-3">Limitations</h2>
+      <br>
+    </div>
+
+    <div class="columns is-centered has-text-centered is-variable is-8">
+      <div class="column is-two-thirds is-centered">
+        <h4 class="title is-4">Incorrect point assignment</h4>
+        <h5 class="title is-5">(Godzilla’s tail is incorrectly assigned to “city”)</h5>
+        <div class="limitation_gallery">
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/images/limit/gvk10.png" alt="gvk10"/>
+            <h6 class="caption">Input</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/images/limit/gvk10-color.png" alt="gvk10"/>
+            <h6 class="caption">Point Assignment</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/videos/limit/gvk10.gif" alt="gvk10"/>
+            <h6 class="caption">Output</h6>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <font color="#00FF00">Godzilla</font> and <font color="#0000FF">the other monster</font> face off, the rubble of the <font color="#FF0000">city</font> forming a chaotic battlefield between them.
+        </div>
+
+        <h4 class="title is-4">Incorrect motion planning</h4>
+        <h5 class="title is-5">(the goalkeeper should move towards the football)</h5>
+        <div class="limitation_gallery">
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/images/limit/football8.png" alt="football8"/>
+            <h6 class="caption">Input</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/videos/limit/football8-color.gif" alt="football8"/>
+            <h6 class="caption">Coarse Object Motion</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/videos/limit/football8.gif" alt="football8"/>
+            <h6 class="caption">Output</h6>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          A <font color="#00FF00">soccer player</font> kicks a <font color="#0000FF">football</font> toward the <font color="#FF0000">goal</font>, while the <font color="#FF00FF">goalkeeper</font> dives in an attempt to make a save.
+        </div>
+
+        <h4 class="title is-4">Failed to generate specified motion</h4>
+        <h5 class="title is-5">( specified motion 'fight' could not be generated successfully)</h5>
+        <div class="limitation_gallery">
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/images/limit/superhero37.png" alt="superhero37"/>
+            <h6 class="caption">Input</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/videos/limit/superhero37-color.gif" alt="superhero37"/>
+            <h6 class="caption">Coarse Object Motion</h6>
+          </div>
+          <div class="captioned_video">
+            <img class="limitation_src_img" src="static/videos/limit/superhero37.gif" alt="superhero37"/>
+            <h6 class="caption">Output</h6>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          The <font color="#FF0000">superman</font> charges through the air with determination to fight with who counters with his overwhelming <font color="#00FF00">Hulk</font>, strength in the ensuing clash.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{liu2025multi,
+          title={Multi-Object Sketch Animation by Scene Decomposition and Motion Planning},
+          author={Liu, Jingyu and Xin, Zijie and Fu, Yuhan and Zhao, Ruixiang and Lan, Bangxiang and Li, Xirong},
+          booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+          year={2025}
+      }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/jyliu-98/MoSketch" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-9">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+            Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://livesketch.github.io/"> Live-Sketch</a> project page. If you want to reuse their <a
+              href="https://github.com/livesketch/livesketch.github.io">source code</a>, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
