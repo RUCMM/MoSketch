@@ -111,6 +111,13 @@
             </span>
 
             <span class="link-block">
+              <a href="#method"
+                class="nav-link button-55 is-normal">
+                <span>Method</span>
+              </a>
+            </span>
+
+            <span class="link-block">
               <a href="#comparisons"
                  class="nav-link button-55 is-normal">
                 <span>Comparisons</span>
@@ -219,6 +226,7 @@
 
 <!--Gallery-->
 <section class="section">
+<!--  <div class="container is-widescreen" id="gallery">-->
   <div class="container is-widescreen" id="gallery">
     <div class="link-block ">
       <a href="#top"
@@ -773,6 +781,1802 @@
         </div>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- How does it work? -->
+<section class="section hero is-light">
+<div class="container is-widescreen" id="method">
+  <div class="link-block ">
+      <a href="#top"
+          class="nav-link button-55 is-normal">
+        <span>Go to Top</span>
+        </a>
+  </div>
+  <div class="section-title has-text-centered is-centered">
+    <h2 class="title is-3">How does it work?</h2><br>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column has-text-centered">
+      <img src="static/images/method/main.png"/>
+      <div class="content has-text-justified">
+        We propose MoSketch based on iterative optimization through Score Distillation Sampling (SDS) and thus animating a multi-object sketch in a training-data free manner.
+        To tackle the two challenges (object-aware motion modeing and complex motion optimization) in a divide-and-conquer strategy, we propose four modules: LLM-based scene decomposition, LLM-based motion planning, multi-grained motion refinement and compositional SDS.
+        The LLM-based scene decomposition is the foundation of three modules, which is employed to identify objects, obtain their locations, and decompose complex motions into simpler components.
+        Based on it, the LLM-based motion planning and the multi-grained motion refinement achieve the object-aware motion modeling considering of relative motions, interactions and physical constraints among objects.
+        The compositional SDS ensures that the complex motions of multiple objects are effectively guided during the iterative optimization.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Comparisons -->
+<section class="section hero is-light">
+  <div class="container is-widescreen" id="comparisons">
+    <div class="link-block ">
+      <a href="#top"
+          class="nav-link button-55 is-normal">
+        <span>Go to Top</span>
+        </a>
+    </div>
+    <div class="section-title has-text-centered is-centered">
+      <h2 class="title is-3">Comparisons to Prior Work</h2><br>
+    </div>
+<!--    <div class="column has-text-centered">-->
+    <div>
+      We compare our MoSketch to four baselines: two text-guided image-to-video generation methods
+      (<a href="https://huggingface.co/zai-org/CogVideoX-5b-I2V">CogVideoX</a> and <a href="https://huggingface.co/Doubiiu/DynamiCrafter">DynamiCrafter</a>)
+      and two text-guided sketch animation methods
+      (<a href="https://github.com/hmrishavbandy/FlipSketch">FlipSketch</a> and <a href="https://github.com/yael-vinker/live_sketch">Live-Sketch</a>).
+      Due to the lack of specialized training on sketch data, CogVideoX and DynamiCrafter generate messy results.
+      FlipSketch generates animation results in the sketch domain due to fine-tuning on sketch data, but fails to preserve visual appearance due to the raster representation of sketches.
+      Live-Sketch preserves visual appearance due to the vector representation of sketches but struggles to model complex motion in multi-object animation.
+      Our proposed MoSketch designs four effective modules to handle complex motion modeling, leading to vivid and realistic multi-object sketch animation.
+    </div>
+
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/aircrafter3.png" alt="aircrafter3"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/aircrafter3.gif" alt="aircrafter3"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/aircrafter3.gif" alt="aircrafter3"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/aircrafter3.gif" alt="aircrafter3"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/aircrafter3.gif" alt="aircrafter3"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/aircrafter3.gif" alt="aircrafter3"/>
+             <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/airplane1.png" alt="airplane1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/airplane1.gif" alt="airplane1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/airplane1.gif" alt="airplane1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/airplane1.gif" alt="airplane1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/airplane1.gif" alt="airplane1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/airplane1.gif" alt="airplane1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/band6.png" alt="band6"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/band6.gif" alt="band6"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/band6.gif" alt="band6"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/band6.gif" alt="band6"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/band6.gif" alt="band6"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/band6.gif" alt="band6"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/basketball5.png" alt="basketball5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/basketball5.gif" alt="basketball5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/basketball5.gif" alt="basketball5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/basketball5.gif" alt="basketball5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/basketball5.gif" alt="basketball5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/basketball5.gif" alt="basketball5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/cannon1.png" alt="cannon1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/cannon1.gif" alt="cannon1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/cannon1.gif" alt="cannon1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/cannon1.gif" alt="cannon1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/cannon1.gif" alt="cannon1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/cannon1.gif" alt="cannon1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carbe4.png" alt="carbe4"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carbe4.gif" alt="carbe4"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carbe4.gif" alt="carbe4"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carbe4.gif" alt="carbe4"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carbe4.gif" alt="carbe4"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carbe4.gif" alt="carbe4"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carfp15.png" alt="carfp15"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carfp15.gif" alt="carfp15"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carfp15.gif" alt="carfp15"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carfp15.gif" alt="carfp15"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carfp15.gif" alt="carfp15"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carfp15.gif" alt="carfp15"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carfp36.png" alt="carfp36"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carfp36.gif" alt="carfp36"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carfp36.gif" alt="carfp36"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carfp36.gif" alt="carfp36"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carfp36.gif" alt="carfp36"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carfp36.gif" alt="carfp36"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carfp38.png" alt="carfp38"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carfp38.gif" alt="carfp38"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carfp38.gif" alt="carfp38"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carfp38.gif" alt="carfp38"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carfp38.gif" alt="carfp38"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carfp38.gif" alt="carfp38"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carfp48.png" alt="carfp48"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carfp48.gif" alt="carfp48"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carfp48.gif" alt="carfp48"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carfp48.gif" alt="carfp48"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carfp48.gif" alt="carfp48"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carfp48.gif" alt="carfp48"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/carside13.png" alt="carside13"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/carside13.gif" alt="carside13"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/carside13.gif" alt="carside13"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/carside13.gif" alt="carside13"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/carside13.gif" alt="carside13"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/carside13.gif" alt="carside13"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/cat1.png" alt="cat1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/cat1.gif" alt="cat1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/cat1.gif" alt="cat1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/cat1.gif" alt="cat1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/cat1.gif" alt="cat1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/cat1.gif" alt="cat1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/cat11.png" alt="cat11"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/cat11.gif" alt="cat11"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/cat11.gif" alt="cat11"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/cat11.gif" alt="cat11"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/cat11.gif" alt="cat11"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/cat11.gif" alt="cat11"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/cat12.png" alt="cat12"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/cat12.gif" alt="cat12"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/cat12.gif" alt="cat12"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/cat12.gif" alt="cat12"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/cat12.gif" alt="cat12"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/cat12.gif" alt="cat12"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/climbmountain1.png" alt="climbmountain1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/climbmountain1.gif" alt="climbmountain1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/climbmountain1.gif" alt="climbmountain1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/climbmountain1.gif" alt="climbmountain1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/climbmountain1.gif" alt="climbmountain1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/climbmountain1.gif" alt="climbmountain1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/climbrock5.png" alt="climbrock5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/climbrock5.gif" alt="climbrock5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/climbrock5.gif" alt="climbrock5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/climbrock5.gif" alt="climbrock5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/climbrock5.gif" alt="climbrock5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/climbrock5.gif" alt="climbrock5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/coupleeat4.png" alt="coupleeat4"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/coupleeat4.gif" alt="coupleeat4"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/coupleeat4.gif" alt="coupleeat4"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/coupleeat4.gif" alt="coupleeat4"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/coupleeat4.gif" alt="coupleeat4"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/coupleeat4.gif" alt="coupleeat4"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/coupleeat7.png" alt="coupleeat7"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/coupleeat7.gif" alt="coupleeat7"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/coupleeat7.gif" alt="coupleeat7"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/coupleeat7.gif" alt="coupleeat7"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/coupleeat7.gif" alt="coupleeat7"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/coupleeat7.gif" alt="coupleeat7"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dog3.png" alt="dog3"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dog3.gif" alt="dog3"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dog3.gif" alt="dog3"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dog3.gif" alt="dog3"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dog3.gif" alt="dog3"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dog3.gif" alt="dog3"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dog8.png" alt="dog8"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dog8.gif" alt="dog8"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dog8.gif" alt="dog8"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dog8.gif" alt="dog8"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dog8.gif" alt="dog8"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dog8.gif" alt="dog8"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dog9.png" alt="dog9"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dog9.gif" alt="dog9"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dog9.gif" alt="dog9"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dog9.gif" alt="dog9"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dog9.gif" alt="dog9"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dog9.gif" alt="dog9"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dog11.png" alt="dog11"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dog11.gif" alt="dog11"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dog11.gif" alt="dog11"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dog11.gif" alt="dog11"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dog11.gif" alt="dog11"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dog11.gif" alt="dog11"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dolphin1.png" alt="dolphin1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dolphin1.gif" alt="dolphin1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dolphin1.gif" alt="dolphin1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dolphin1.gif" alt="dolphin1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dolphin1.gif" alt="dolphin1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dolphin1.gif" alt="dolphin1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dolphin2.png" alt="dolphin2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dolphin2.gif" alt="dolphin2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dolphin2.gif" alt="dolphin2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dolphin2.gif" alt="dolphin2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dolphin2.gif" alt="dolphin2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dolphin2.gif" alt="dolphin2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dolphin6.png" alt="dolphin6"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dolphin6.gif" alt="dolphin6"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dolphin6.gif" alt="dolphin6"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dolphin6.gif" alt="dolphin6"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dolphin6.gif" alt="dolphin6"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dolphin6.gif" alt="dolphin6"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/dolphin13.png" alt="dolphin13"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/dolphin13.gif" alt="dolphin13"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/dolphin13.gif" alt="dolphin13"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/dolphin13.gif" alt="dolphin13"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/dolphin13.gif" alt="dolphin13"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/dolphin13.gif" alt="dolphin13"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/eagle4.png" alt="eagle4"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/eagle4.gif" alt="eagle4"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/eagle4.gif" alt="eagle4"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/eagle4.gif" alt="eagle4"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/eagle4.gif" alt="eagle4"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/eagle4.gif" alt="eagle4"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/eat2.png" alt="eat2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/eat2.gif" alt="eat2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/eat2.gif" alt="eat2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/eat2.gif" alt="eat2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/eat2.gif" alt="eat2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/eat2.gif" alt="eat2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/excavator1.png" alt="excavator1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/excavator1.gif" alt="excavator1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/excavator1.gif" alt="excavator1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/excavator1.gif" alt="excavator1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/excavator1.gif" alt="excavator1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/excavator1.gif" alt="excavator1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/fish1.png" alt="fish1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/fish1.gif" alt="fish1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/fish1.gif" alt="fish1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/fish1.gif" alt="fish1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/fish1.gif" alt="fish1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/fish1.gif" alt="fish1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/fitness4.png" alt="fitness4"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/fitness4.gif" alt="fitness4"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/fitness4.gif" alt="fitness4"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/fitness4.gif" alt="fitness4"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/fitness4.gif" alt="fitness4"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/fitness4.gif" alt="fitness4"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/fitness8.png" alt="fitness8"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/fitness8.gif" alt="fitness8"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/fitness8.gif" alt="fitness8"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/fitness8.gif" alt="fitness8"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/fitness8.gif" alt="fitness8"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/fitness8.gif" alt="fitness8"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/fitness9.png" alt="fitness9"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/fitness9.gif" alt="fitness9"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/fitness9.gif" alt="fitness9"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/fitness9.gif" alt="fitness9"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/fitness9.gif" alt="fitness9"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/fitness9.gif" alt="fitness9"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/flydisk3.png" alt="flydisk3"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/flydisk3.gif" alt="flydisk3"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/flydisk3.gif" alt="flydisk3"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/flydisk3.gif" alt="flydisk3"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/flydisk3.gif" alt="flydisk3"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/flydisk3.gif" alt="flydisk3"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/football4.png" alt="football4"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/football4.gif" alt="football4"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/football4.gif" alt="football4"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/football4.gif" alt="football4"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/football4.gif" alt="football4"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/football4.gif" alt="football4"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/football7.png" alt="football7"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/football7.gif" alt="football7"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/football7.gif" alt="football7"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/football7.gif" alt="football7"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/football7.gif" alt="football7"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/football7.gif" alt="football7"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/freighter1.png" alt="freighter1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/freighter1.gif" alt="freighter1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/freighter1.gif" alt="freighter1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/freighter1.gif" alt="freighter1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/freighter1.gif" alt="freighter1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/freighter1.gif" alt="freighter1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/giraffe2.png" alt="giraffe2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/giraffe2.gif" alt="giraffe2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/giraffe2.gif" alt="giraffe2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/giraffe2.gif" alt="giraffe2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/giraffe2.gif" alt="giraffe2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/giraffe2.gif" alt="giraffe2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/goat10.png" alt="goat10"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/goat10.gif" alt="goat10"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/goat10.gif" alt="goat10"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/goat10.gif" alt="goat10"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/goat10.gif" alt="goat10"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/goat10.gif" alt="goat10"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/gvk10.png" alt="gvk10"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/gvk10.gif" alt="gvk10"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/gvk10.gif" alt="gvk10"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/gvk10.gif" alt="gvk10"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/gvk10.gif" alt="gvk10"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/gvk10.gif" alt="gvk10"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/helicopter1.png" alt="helicopter1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/helicopter1.gif" alt="helicopter1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/helicopter1.gif" alt="helicopter1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/helicopter1.gif" alt="helicopter1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/helicopter1.gif" alt="helicopter1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/helicopter1.gif" alt="helicopter1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/horsecar2.png" alt="horsecar2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/horsecar2.gif" alt="horsecar2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/horsecar2.gif" alt="horsecar2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/horsecar2.gif" alt="horsecar2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/horsecar2.gif" alt="horsecar2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/horsecar2.gif" alt="horsecar2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/horsecar5.png" alt="horsecar5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/horsecar5.gif" alt="horsecar5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/horsecar5.gif" alt="horsecar5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/horsecar5.gif" alt="horsecar5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/horsecar5.gif" alt="horsecar5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/horsecar5.gif" alt="horsecar5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/horsejump2.png" alt="horsejump2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/horsejump2.gif" alt="horsejump2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/horsejump2.gif" alt="horsejump2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/horsejump2.gif" alt="horsejump2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/horsejump2.gif" alt="horsejump2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/horsejump2.gif" alt="horsejump2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/huldres6.png" alt="huldres6"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/huldres6.gif" alt="huldres6"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/huldres6.gif" alt="huldres6"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/huldres6.gif" alt="huldres6"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/huldres6.gif" alt="huldres6"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/huldres6.gif" alt="huldres6"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/ice2.png" alt="ice2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/ice2.gif" alt="ice2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/ice2.gif" alt="ice2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/ice2.gif" alt="ice2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/ice2.gif" alt="ice2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/ice2.gif" alt="ice2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/jumprope2.png" alt="jumprope2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/jumprope2.gif" alt="jumprope2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/jumprope2.gif" alt="jumprope2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/jumprope2.gif" alt="jumprope2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/jumprope2.gif" alt="jumprope2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/jumprope2.gif" alt="jumprope2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/ladder2.png" alt="ladder2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/ladder2.gif" alt="ladder2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/ladder2.gif" alt="ladder2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/ladder2.gif" alt="ladder2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/ladder2.gif" alt="ladder2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/ladder2.gif" alt="ladder2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/marry8.png" alt="marry8"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/marry8.gif" alt="marry8"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/marry8.gif" alt="marry8"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/marry8.gif" alt="marry8"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/marry8.gif" alt="marry8"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/marry8.gif" alt="marry8"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/move5.png" alt="move5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/move5.gif" alt="move5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/move5.gif" alt="move5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/move5.gif" alt="move5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/move5.gif" alt="move5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/move5.gif" alt="move5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/pouring8.png" alt="pouring8"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/pouring8.gif" alt="pouring8"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/pouring8.gif" alt="pouring8"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/pouring8.gif" alt="pouring8"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/pouring8.gif" alt="pouring8"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/pouring8.gif" alt="pouring8"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/rollercoaster2.png" alt="rollercoaster2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/rollercoaster2.gif" alt="rollercoaster2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/rollercoaster2.gif" alt="rollercoaster2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/rollercoaster2.gif" alt="rollercoaster2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/rollercoaster2.gif" alt="rollercoaster2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/rollercoaster2.gif" alt="rollercoaster2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/rotate2.png" alt="rotate2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/rotate2.gif" alt="rotate2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/rotate2.gif" alt="rotate2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/rotate2.gif" alt="rotate2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/rotate2.gif" alt="rotate2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/rotate2.gif" alt="rotate2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/singleeat6.png" alt="singleeat6"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/singleeat6.gif" alt="singleeat6"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/singleeat6.gif" alt="singleeat6"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/singleeat6.gif" alt="singleeat6"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/singleeat6.gif" alt="singleeat6"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/singleeat6.gif" alt="singleeat6"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/spaceshuttle6.png" alt="spaceshuttle6"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/spaceshuttle6.gif" alt="spaceshuttle6"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/spaceshuttle6.gif" alt="spaceshuttle6"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/spaceshuttle6.gif" alt="spaceshuttle6"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/spaceshuttle6.gif" alt="spaceshuttle6"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/spaceshuttle6.gif" alt="spaceshuttle6"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/superhero28.png" alt="superhero28"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/superhero28.gif" alt="superhero28"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/superhero28.gif" alt="superhero28"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/superhero28.gif" alt="superhero28"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/superhero28.gif" alt="superhero28"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/superhero28.gif" alt="superhero28"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/tank2.png" alt="tank2"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/tank2.gif" alt="tank2"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/tank2.gif" alt="tank2"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/tank2.gif" alt="tank2"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/tank2.gif" alt="tank2"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/tank2.gif" alt="tank2"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/tiger1.png" alt="tiger1"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/tiger1.gif" alt="tiger1"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/tiger1.gif" alt="tiger1"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/tiger1.gif" alt="tiger1"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/tiger1.gif" alt="tiger1"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/tiger1.gif" alt="tiger1"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/train5.png" alt="train5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/train5.gif" alt="train5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/train5.gif" alt="train5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/train5.gif" alt="train5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/train5.gif" alt="train5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/train5.gif" alt="train5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="comparisons_gallery">
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/images/gallery/work5.png" alt="work5"/>
+             <h6 class="caption">Input</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/CogVideoX/work5.gif" alt="work5"/>
+             <h6 class="caption">CogVideoX</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/DynamiCrafter/work5.gif" alt="work5"/>
+             <h6 class="caption">DynamiCrafter</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/FlipSketch/work5.gif" alt="work5"/>
+             <h6 class="caption">FlipSketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/comparisons/Live-Sketch/work5.gif" alt="work5"/>
+             <h6 class="caption">Live-Sketch</h6>
+            </div>
+            <div class="captioned_video">
+             <img class="comp_src_img" src="static/videos/gallery/work5.gif" alt="work5"/>
+              <h6 class="caption"><b>Ours</b></h6>
+            </div>
+          </div>
+      </div>
+
     </div>
   </div>
 </section>
