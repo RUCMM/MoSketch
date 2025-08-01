@@ -1,4 +1,4 @@
-# [ICCV] Multi-Object Sketch Animation by Scene Decomposition and Motion Planning
+# [ICCV 2025] Multi-Object Sketch Animation by Scene Decomposition and Motion Planning
 
 This is the repository for the [MoSketch](https://rucmm.github.io/MoSketch) website.
 
